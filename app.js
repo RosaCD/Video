@@ -92,3 +92,48 @@ function alerta() {
 let alumno = confirm("¿Eres un alumno?");
 
 alert( alumno );
+
+let prueba = {
+
+    color: "azul",
+    
+    func: function ( ) {
+    
+    return this.color;
+    
+    },
+    
+};
+console.log (prueba.func());
+
+const Maestro = {
+    name: "Chantal",
+    age: 27,
+    job: "Progrmación",
+    };
+      
+const Alumno = {
+    name: "Rosa",
+    age: 18,
+    job: "Alumno",
+};
+      
+function Hola() {
+    console.log("Hola, mi nombre es " + this.name);
+};
+
+function Edad() {
+console.log("Mi edad es " + this.age); 
+};      
+
+Maestro.Hola = Hola;
+Alumno.Hola = Hola;
+      
+Maestro.Hola();
+Alumno.Hola();
+
+Maestro.Edad = Edad;
+Alumno.Edad = Edad;
+
+Maestro.Edad();
+Alumno.Edad();
